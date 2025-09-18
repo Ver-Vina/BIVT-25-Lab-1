@@ -7,7 +7,10 @@
             bool answer = false;
 
             // code here
-
+            if ((a>0 && b>0) | (a==0 && b==0)) 
+                answer = true;
+            else if (a<0 && b<0) 
+                answer = true;
             // end
 
             return answer;
@@ -17,7 +20,9 @@
             bool answer = false;
 
             // code here
-
+            d=d*10000;
+            if (d%10000!=0)
+                answer = true;
             // end
 
             return answer;
@@ -27,7 +32,8 @@
             bool answer = false;
 
             // code here
-
+            if ((double) a % b == 0)
+                answer = true;
             // end
 
             return answer;
@@ -85,3 +91,4 @@
         }
     }
 }
+

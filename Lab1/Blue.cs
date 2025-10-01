@@ -1,4 +1,8 @@
-﻿namespace Lab1
+using System.Runtime.Intrinsics.X86;
+using System.Security.Claims;
+using System.Security.Cryptography;
+
+namespace Lab1
 {
     public class Blue
     {
@@ -86,11 +90,17 @@
         
             // code here
             if (Math.Abs(d) < Math.Abs(f))
+            {
                 if (d > 0)
                     answer = -1;
-                else
-                   if (f > 0)
+            }
+                
+            else
+            {
+                if (f > 0)
                     answer = 1;
+            }
+                
             // end
         
             return answer;
@@ -100,12 +110,23 @@
             bool answer = false;
 
             // code here
-            
+            int a1 = a/2;
+            int b1 = b/2;
+            int c1 = c/2;
+            int s = a1+ b1+c1;
+            if (s>=2)
+            {
+                if (s%3==0 || (s+1)%3==0)
+                {
+                    answer = true;
+                }
+            } 
             // end
 
             return answer;
         }
     }
 }
+
 
 
